@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Web4Pro_ProductsAssoc>
+        <version>0.1.0</version>
+    </Web4Pro_ProductsAssoc>
+</modules>
+<frontend>
+    <routers>
+        <productsassoc>
+            <use>standard</use>
+            <args>
+                <module>Web4Pro_ProductsAssoc</module>
+                <frontName>productsassoc</frontName>
+            </args>
+        </productsassoc>
+    </routers>
+    <layout>
+        <updates>
+            <productsassoc module="productsassoc">
+                <file>productsassoc.xml</file>
+            </productsassoc>
+        </updates>
+    </layout>
+</frontend>
+<global>
+	<models>
+       <productsassoc>
+         <class>Web4Pro_ProductsAssoc_Model</class>
+       </productsassoc>
+    </models>
+	<blocks>
+		<productsassoc>
+			<class>Web4Pro_ProductsAssoc_Block</class>
+       </productsassoc>
+	</blocks>
+	 <events>
+      <productsassoc_shoppingcart_entrance>
+        <observers>
+          <productsassoc>
+            <type>singleton</type>
+            <class>Web4Pro_ProductsAssoc_Model_ProductsAssoc_Observer</class>
+            <method>products_assoc_form_submit</method>
+          </productsassoc>
+        </observers>
+      </productsassoc_shoppingcart_entrance>   
+    </events>
+</global>
+</config>

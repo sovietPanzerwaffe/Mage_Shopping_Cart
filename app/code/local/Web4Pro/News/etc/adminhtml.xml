@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <news module="news">
+            <title>News</title>
+            <sort_order>71</sort_order>               
+            <children>
+                <news module="news">
+                    <title>Manage news</title>
+                    <sort_order>0</sort_order>
+                    <action>news/adminhtml_news</action>
+                </news>
+                <authors>
+                    <title>Manage Autors</title>
+                    <sort_order>1</sort_order>
+					<action>news/adminhtml_authors</action>
+                </authors>
+            </children>
+        </news>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <news>
+                        <title>News Module</title>
+                        <sort_order>200</sort_order>
+                    </news>
+                     <authors>
+                        <title>Authors Module</title>
+                        <sort_order>200</sort_order>
+                    </authors>
+                </children>
+            </admin>
+        </resources>   
+    </acl>
+    <layout>
+        <updates>
+            <news>
+                <file>news.xml</file>
+            </news>
+            <authors>
+				<file>authors.xml</file>
+			</authors>
+        </updates>
+    </layout>
+</config>

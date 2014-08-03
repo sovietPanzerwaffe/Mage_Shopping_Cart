@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+ <default>
+	<reference name="head">  
+        <!--action method="addItem">
+			<type>skin_css</type>
+			<name>css/productsassoc.css</name>
+		</action-->
+	</reference> 
+ </default>
+  <checkout_cart_index>
+	<reference name="content">
+        <block type="productsassoc/ProductsAssoc" name="productsassoc.shpcart" template="productsassoc/productsassoc.phtml"/>      
+	</reference>
+  </checkout_cart_index>
+ </layout>
